@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
+class UploadContainer extends Component {
 
   createPicture = (upload) => {
     fetch('http://localhost300/pictures', {
@@ -28,18 +28,16 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="UploadContainer">
         <form>
           <input type="file" onChange={() => console.log("changed")}/>
           <br/>
           <div onClick={() => console.log("hi")}>post picture</div>
           <br/>
-
-          {/* <img id="preview" src="#" alt="your upload" style={styles} /> */}
         </form>
       </div>
     );
   }
 }
 
-export default App;
+export default UploadContainer;
